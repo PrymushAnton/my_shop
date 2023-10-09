@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'APP_Settings/css/base.css' %}" defer>
+    {% block link %}
+    
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <div class="relevation">
+            <div class="head">
+                <h1>
+                    <a href="{% url 'main_page' %}">Mega shop</a>
+                </h1>
+            </div>
+            <div class="content">
+                {% block header %}
+                {% endblock %}
+            </div>
+            <div class="urls">
+                <a href="{% url 'cart_page' %}" class="urlsRight">Cart page</a>
+                <a href="{% url 'contact_page' %}">Contact page</a>
+            </div>
+        </div>
+        
+    </header>
+    
+    <div class='background'></div>
+
+    <main>
+        {% block main %}
+
+        {% endblock %}
+    </main>
+
+</body>
+</html>
