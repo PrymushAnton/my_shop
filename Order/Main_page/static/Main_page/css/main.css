@@ -1,12 +1,12 @@
 img{
     display: inline-block;
     width: 14%;
-    /* border: 5px solid #C1C8E4; */
+    border: 2px solid #C1C8E4;
     margin-left: 10px;
-    background: linear-gradient(to top, #C1C8E4, #6498e9);
-    /* 6498e9 */
-}
+    background: linear-gradient(to top, #ffea00, #ff8800);
 
+}
+/* background: linear-gradient(to top, #C1C8E4, #6498e9); */
 main div{
     border-bottom: 4px solid #C1C8E4 ;
     width: 100%;
