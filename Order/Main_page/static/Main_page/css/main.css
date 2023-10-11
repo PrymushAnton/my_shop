@@ -40,3 +40,24 @@ main div div{
     margin-left: 10px;
     font-size: 25px;
 }
+
+.info a{
+    border: 2px solid orange;
+    background-color: orange;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 200px;
+    height: 40px;
+    margin-left: 10px;
+    color: black;
+}
+
+.info a:hover{
+    background-color: darkgoldenrod;
+    border: 2px solid darkgoldenrod;
+}
