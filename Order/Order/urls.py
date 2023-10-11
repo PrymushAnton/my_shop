@@ -29,5 +29,10 @@ urlpatterns = [
     path('cart_page/', shopping_cart_views.cart_page, name= "cart_page"),
     path('contact_page/', contact_views.contact_page, name= "contact_page"),
     path('authorization_page/', authorization_registration_views.authorization, name= "authorization_page"),
-    path('registration_page/', authorization_registration_views.registration, name= "registration_page")
+    path('registration_page/', authorization_registration_views.registration, name= "registration_page"),
+    path('product_page2/', product_page_views.product_page2, name= "product_page2"),
+    path('product_page3/', product_page_views.product_page3, name= "product_page3"),
+    path('product_page4/', product_page_views.product_page4, name= "product_page4"),
+    path('product_page5/', product_page_views.product_page5, name= "product_page5"),
+    
 ]
