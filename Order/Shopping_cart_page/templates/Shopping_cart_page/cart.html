@@ -1,2 +1,25 @@
 {% extends 'APP_Settings/base.html' %}
 {% load static %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'Shopping_cart_page/css/cart.css' %}">
+{% endblock %}
+
+{% block main %}
+<div class="block_cart">
+    <div>
+        <img src="https://play-lh.googleusercontent.com/N7p1LUZQj1Zrth7Jmn6tMlogB8JYv-ozxxJC-Qwq_NIqBluDSUj0Mt8BeBphM0rX9A=w240-h480-rw" alt="Product photo">
+    </div>
+
+    <div id="name">
+        <p>Name</p>
+    </div>
+
+    <div id="buttons">
+        <a href="{% url 'product_page' %}">Дізнатися більше</a>
+        <a href="{% url 'product_page' %}">Вилучити з кошика</a>
+    </div>
+
+    
+</div>
+{% endblock %}

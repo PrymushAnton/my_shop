@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#image {
+    width: 20%;
+    display: inline-block;
+    background-color: black;
+    /* border: 5px solid black; */
+    
+}
+
+main div{
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    
+}
+
+#info{
+    width: 80%;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+
+main div #info p{
+    padding: 10px;
+    font-size: 25px;
+
+}
+/* 
+img {
+    width: 50px;
+    height: 50px;
+    margin: 50px;
+} */

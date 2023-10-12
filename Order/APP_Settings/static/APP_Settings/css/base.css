@@ -55,7 +55,7 @@ body header .head h1 a{
     font-size: 1.3em;
 }
 
-body header .urls{
+body header .settings{
     position: absolute;
     top: 15px;
     right: 2%;
@@ -68,7 +68,7 @@ body header .urls{
     right: 75%; */
 /* } */
 
-body header .urls a{
+body header .settings a{
     display: block;
     color: #000000;
     /* text-decoration: none; */
@@ -79,3 +79,4 @@ main{
     width: 100%;
     top: 80px;
 }
+
