@@ -65,10 +65,21 @@ main div.zaglav h1{
     height: auto;
     width: auto;
     display: inline;
-    position: fixed;
+    position: absolute;
     right: 10%;
     bottom: 5%;
 }
+
+.url {
+    position: absolute;
+    top: 2%;
+}
+
+.url button {
+    position: absolute;
+    right: 0;
+}
+
 button{
     font-size: 1.7em;
     background-color: rgba(60, 54, 172, 0.547);

@@ -50,3 +50,22 @@ main div div p{
 main div div img{
     margin-top: 10px;
 }
+
+#buttons button {
+    display: inline;
+    border: 2px solid orange;
+    background-color: orange;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 1%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#buttons button:hover{
+    background-color: darkgoldenrod;
+    border: 2px solid darkgoldenrod;
+    /* animation-name: example;
+    animation-duration: 0.5s; */
+    box-shadow: 2px 2px 2px;
+}

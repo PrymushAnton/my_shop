@@ -1,0 +1,33 @@
+{% extends "APP_Settings/base.html" %}
+{% load static %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'Product_page/css/product_page.css' %}">
+{% endblock %}
+
+{% block main %}
+<div>
+
+    <div id="image">
+        <img src="https://yabloki.ua/media/cache/app_product_page_small_slider_image/06/0d/799b3132b32669c8e5a2f609531a.png" alt="">
+    </div>
+
+    <div id="info">
+        <p>Діагональ екрана: 6.1</p>
+        <p>Роздільна здатність дисплея: 2556x1179</p>
+        <p>Тип матриці: OLED (Super Retina XDR)</p>
+        <p>Частота оновлення екрана: 120 Гц</p>
+        <p>Вбудована пам'ять: 512 ГБ</p>
+        <p>Операційна система: iOS</p>
+        <p>Фронтальна камера: 12 Мп</p>
+        <p>Особливості фронтальної камери: Автофокус, Одинарна, Підтримка знімання 4К, Стабілізація, Фронтальний спалах</p>
+        <p>Назва процесора: Apple A17 Pro</p>
+        <p>Кількість ядер: 2+4</p>
+        <p>Матеріал корпуса: Алюміній + Титан</p>
+        <p>Роз'єми: USB Type-C</p>
+        <p>Вага, г: 187</p>
+        <p>Гарантія: 12 місяців</p>
+    </div>
+
+</div>
+{% endblock %}
