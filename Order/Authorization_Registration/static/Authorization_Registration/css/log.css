@@ -82,12 +82,18 @@ main div.zaglav h1{
 
 button{
     font-size: 1.7em;
-    background-color: rgba(60, 54, 172, 0.547);
+    background-color: orange;
     border-radius: 12px;
-    border-color: rgba(0, 0, 0, 0);
-}
-
-button:hover{
-    background-color: rgba(100, 92, 255, 0.547);
+    
     border-color: rgba(0, 0, 0);
 }
+/* rgba(60, 54, 172, 0.547) */
+/* border-color: rgba(0, 0, 0, 0); */
+
+button:hover{
+    background-color: darkgoldenrod;
+    box-shadow: 2px 2px 2px;
+    cursor: pointer;
+}
+
+/* rgba(100, 92, 255, 0.547) */

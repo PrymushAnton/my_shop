@@ -24,6 +24,7 @@ body header{
     height: 80px;
     background-color: #5680E9 ;
     border-bottom: #000000 solid 4px;
+    
 }
 
 body header .relevation{
@@ -75,7 +76,7 @@ main{
 }
 
 .mainmenubtn {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: orange;
     /* color: white; */
     position: relative;
     border: none;
@@ -88,7 +89,7 @@ main{
     /* padding:20px; */
     /* margin-top:20px; */
 }
-
+/* rgba(0, 0, 0, 0) */
 .mainmenubtn img{
     display: inline;
     margin: 0;
@@ -110,8 +111,28 @@ main{
     text-decoration: none;
     display: block;
     border-radius: 12px;
-    background-color: #84CEEB;
+    background-color: orange;
 }
+
+.dropdown-child a:hover{
+    background-color: darkgoldenrod;
+}
+/* #84CEEB */
 .settings:hover .dropdown-child {
     display: block;
 }
+
+.header_buttons{
+    display: flex;
+    position: absolute;
+    left: 85%;
+    top: 20%;
+    flex-direction: column;
+}
+
+.header_buttons a{
+    font-size: 20px;
+    /* text-decoration: none; */
+    color: black;
+}
+
