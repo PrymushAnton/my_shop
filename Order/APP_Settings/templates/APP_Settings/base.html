@@ -6,8 +6,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IPH`ons Market</title>
+    <link rel="shortcut icon" href="{% static 'APP_Settings/photo/favicon.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'APP_Settings/css/base.css' %}" defer>
+    <script src="{% static 'APP_Settings/js/base_js.js' %}" defer></script>
     {% block link %}
     
     {% endblock %}
@@ -17,7 +19,7 @@
         <div class="relevation">
             <div class="head">
                 <h1>
-                    <a href="{% url 'main_page' %}">Mega shop</a>
+                    <a href="{% url 'main_page' %}">IPH`ons Market</a>
                 </h1>
             </div>
             <div class="content">
@@ -25,9 +27,12 @@
                 {% endblock %}
             </div>
             <div class="settings">
+                <button class="mainmenubtn">
+                    <img src="{% static 'APP_Settings/photo/menu_icon.png' %}" alt='???'>
+                </button>
                 <!-- <button src></button> -->
-                <a href="{% url 'cart_page' %}" class="urlsRight">Корзина</a>
-                <a href="{% url 'contact_page' %}">Contact page</a>
+                {% comment %} <a href="{% url 'cart_page' %}" class="urlsRight">Корзина</a>
+                <a href="{% url 'contact_page' %}">Contact page</a> {% endcomment %}
             </div>
         </div>
         
