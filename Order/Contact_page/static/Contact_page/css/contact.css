@@ -5,4 +5,37 @@
 
 p{
     font-size: 25px;
+    padding: 5px;
+}
+
+h2{
+    padding: 5px;
+    text-decoration: underline;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+}
+
+main div{
+    border: 2px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    width: 350px;
+    height: 230px;
+    margin: 20px;
+    background: linear-gradient(to top, #e3d000, #ff8800);
+}
+
+#telegramIco{
+    width: 5%;
+}
+
+#viberIco{
+    width: 7%;
+}
+
+#whatsappIco{
+    width: 5%;
 }

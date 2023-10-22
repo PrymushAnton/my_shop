@@ -3,48 +3,68 @@
     padding: 0;
 }
 
-
-#image {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 20%;
-    /* display: inline-block; */
-    /* background-color: black; */
-    /* border: 5px solid black; */
-} 
-
-img{
-    display: inline-block;
+.image img{
     background: linear-gradient(to top, #ffea00, #ff8800);
-    /* width: 100%; */
-    /* height: 50%; */
-}
-
-main .maindiv{
-    width: 100%;
-    display: flex;
-    /* justify-items: center; */
-    justify-content: space-between;
-    
-}
-
-#info{
     width: 80%;
-    display: inline-block;
-    flex-direction: column;
-    justify-content: flex-start;
-    
+    border: 2px solid black;
 }
 
-main div #info p{
-    padding: 10px;
+.mainDiv{
+    display: flex;
+}
+
+
+
+p{
+    padding: 4px;
     font-size: 25px;
+}
+
+.info h2{
+    padding: 4px;
+    font-size: 25px;
+}
+
+.image {
+    width: 17%;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-bottom: 3px solid black;
+    border-right: 2px solid black;
+}
+
+.info{
+    width: 83%;
+    border-bottom: 3px solid black;
+    /* display: inline-block;
+    flex-direction: column;
+    justify-content: flex-start; */
+}
+
+#buttons{
+    display: inline-block;
 
 }
-/* 
-img {
-    width: 50px;
-    height: 50px;
-    margin: 50px;
-} */
+
+#buttons button{
+    display: inline;
+    border: 2px solid black;
+    background-color: orange;
+    border-radius: 10px;
+    font-size: 22px;
+    width: 250px;
+    height: 45px;
+    position: absolute;
+    top: 140%;
+    left: 85%;
+}
+
+#buttons button:hover{
+    background-color: darkgoldenrod;
+    box-shadow: 2px 2px 2px;
+    cursor: pointer;
+}
