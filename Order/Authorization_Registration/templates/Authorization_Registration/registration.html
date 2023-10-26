@@ -7,31 +7,33 @@
 
 
 {% block main %}
-<div class="zaglav">
-    <h1>Зареєструйтесь</h1>
-</div>
-<div class="centerBlock">
-    <div class="registrSistem">
-        <div class="label">
-            <p>Логін</p>
-            <p>Пошта</p>
-            <p>Номер телефону</p>
-            <p>Пароль</p>
-            <p>Повторіть пароль</p>
+    <form>
+        <div class="zaglav">
+            <h1>Зареєструйтесь</h1>
         </div>
-        <div class="input">
-            <input type="text" name="username">
-            <input type="emeil" name="emeil">
-            <input type="text" name="number">
-            <input type="password" name="pass">
-            <input type="password" name="pass">
+        <div class="centerBlock">
+            <div class="registrSistem">
+                <div class="label">
+                    <p>Логін</p>
+                    <p>Пошта</p>
+                    <p>Номер телефону</p>
+                    <p>Пароль</p>
+                    <p>Повторіть пароль</p>
+                </div>
+                <div class="input">
+                    <input type="text" name="username">
+                    <input type="emeil" name="emeil">
+                    <input type="text" name="number">
+                    <input type="password" name="pass">
+                    <input type="password" name="pass">
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-{% comment %} <div class = 'url'>
-    <button onclick="window.location.href = '/authorization_page/';">Ввійти в акаунт</button>
-</div> {% endcomment %}
-<div class="butn">
-    <button>Підтвердити</button>
-</div>
+        {% comment %} <div class = 'url'>
+            <button onclick="window.location.href = '/authorization_page/';">Ввійти в акаунт</button>
+        </div> {% endcomment %}
+        <div class="butn">
+            <button>Підтвердити</button>
+        </div>
+    </form>
 {% endblock %}
