@@ -8,31 +8,47 @@
 
 
 {% block main %}
-
-<div class="line_div">
-    <div class="images">
-        <h2>Apple iPhone 15 Pro Max</h2>
-        <img src="https://yabloki.ua/media/cache/app_product_page_small_slider_image/94/44/a6edf81bc54bb45c1a12ef1078b4.png" alt="">
-    </div>
-    
-    <div class="info">
-        <p>Екран: 6.7 ", 2796x1290, 460 ppi, 120 Гц</p>
-        <p>Камера: 3 модулі, 48 МП, + 12 МП, fullHD 60 к/с, відео 4K, оптична стабілізація, стабілізація матрицею</p>
-        <p>Пам'ять: 1024 ГБ</p>
-        <p>Процесор: Apple A17 Pro</p>
-        <p>Корпус: скло, 221 г, товщина 8 мм</p>
-        <!-- <a href="{% url 'product_page' %}">Дізнатися більше</a>
-        <a href="#">Додати у кошик</a> -->
-        <div class="buttons">
-            <button onclick="window.location.href = 'product_page/';" class="firstButton">Дізнатися більше</button>
-            <button>Додати у кошик</button>
+    {% for product in products %}
+        <div class="line_div">
+            <div class="images">
+                <h2>{{ product.name }}</h2>
+                <img src="{{product.image_path}}" alt="">
+            </div>
+            <div class="info">
+                <p>Екран: {{product.screen}}</p>
+                <p>Камера: {{product.camera}}</p>
+                <p>Пам'ять: {{product.memory}}</p>
+                <p>Процесор: {{product.cpu}}</p>
+                <p>Корпус: {{product.case}}</p>
+                <div class="buttons">
+                    <button onclick="window.location.href = 'product_page/';" class="firstButton">Дізнатися більше</button>
+                    <button>Додати у кошик</button>
+                </div>
+            </div>
         </div>
-    </div>
+    {% endfor %}
     
-</div>
+    <!-- <div class="line_div">
+        <div class="images">
+            <h2>Apple iPhone 15 Pro Max</h2>
+            <img src="https://yabloki.ua/media/cache/app_product_page_small_slider_image/94/44/a6edf81bc54bb45c1a12ef1078b4.png" alt="">
+        </div>
+        <div class="info">
+            <p>Екран: 6.7 ", 2796x1290, 460 ppi, 120 Гц</p>
+            <p>Камера: 3 модулі, 48 МП, + 12 МП, fullHD 60 к/с, відео 4K, оптична стабілізація, стабілізація матрицею</p>
+            <p>Пам'ять: 1024 ГБ</p>
+            <p>Процесор: Apple A17 Pro</p>
+            <p>Корпус: скло, 221 г, товщина 8 мм</p>
+            <div class="buttons">
+                <button onclick="window.location.href = 'product_page/';" class="firstButton">Дізнатися більше</button>
+                <button>Додати у кошик</button>
+            </div>
+        </div>
+    </div> -->
 
 
-<div class="line_div">
+
+<!-- <div class="line_div">
 
     <div class="images">
         <h2>Apple iPhone 15 Pro</h2>
@@ -45,8 +61,6 @@
         <p>Пам'ять: 1024 ГБ</p>
         <p>Процесор: Apple A17 Pro</p>
         <p>Корпус: скло, 187 г, товщина 8 мм</p>
-        <!-- <a href="{% url 'product_page2' %}">Дізнатися більше</a>
-        <a href="#">Додати у кошик</a> -->
         <div class="buttons">
             <button onclick="window.location.href = 'product_page2/';" class="firstButton">Дізнатися більше</button>
             <button>Додати у кошик</button>
@@ -70,8 +84,6 @@
         <p>Пам'ять: 512 ГБ</p>
         <p>Процесор: Apple A16</p>
         <p>Корпус: скло, 201 г, товщина 8 мм</p>
-        <!-- <a href="{% url 'product_page3' %}">Дізнатися більше</a>
-        <a href="#">Додати у кошик</a> -->
         <div class="buttons">
             <button onclick="window.location.href = 'product_page3/';" class="firstButton">Дізнатися більше</button>
             <button>Додати у кошик</button>
@@ -95,8 +107,6 @@
         <p>Пам'ять: 512 ГБ</p>
         <p>Процесор: Apple A16</p>
         <p>Корпус: скло, 171 г, товщина 8 мм</p>
-        <!-- <a href="{% url 'product_page4' %}">Дізнатися більше</a>
-        <a href="#">Додати у кошик</a> -->
         <div class="buttons">
             <button onclick="window.location.href = 'product_page4/';" class="firstButton">Дізнатися більше</button>
             <button>Додати у кошик</button>
@@ -120,13 +130,11 @@
         <p>Пам'ять: 512 ГБ</p>
         <p>Процесор: Apple A16</p>
         <p>Корпус: скло, 206 г, товщина 8 мм</p>
-        <!-- <a href="{% url 'product_page5' %}">Дізнатися більше</a>
-        <a href="#">Додати у кошик</a> -->
         <div class="buttons">
             <button onclick="window.location.href = 'product_page5/';" class="firstButton">Дізнатися більше</button>
             <button>Додати у кошик</button>
         </div>
     </div>
 
-</div>
+</div> -->
 {% endblock %}
