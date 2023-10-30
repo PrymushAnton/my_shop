@@ -7,7 +7,12 @@ def authorization(request):
 def registration(request):
     return render(request, 'Authorization_Registration/registration.html')
 
-def register_request(request):
+def register(request):
     if request.method == 'POST':
-        print(1)
+        print(request)
     return render(request, 'Authorization_Registration/registration.html')
+
+def login(request):
+    if request.method == 'POST':
+        print(request.POST)
+    return render(request, 'Authorization_Registration/authorization.html')
