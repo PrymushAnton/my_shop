@@ -8,7 +8,8 @@
     
 
 {% block main %}
-    <form action="." method="post">
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
         <div class="zaglav">
             <h1>Ввійдіть в акаунт</h1>
         </div>
@@ -24,9 +25,6 @@
                 </div>
             </div>
         </div>
-        {% comment %} <div class = 'url'>
-            <button onclick="window.location.href = '/registration_page/';">Регістрація</button>
-        </div> {% endcomment %}
         <div class="butn">
             <button>Підтвердити</button>
         </div>
