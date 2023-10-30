@@ -6,5 +6,7 @@ from django.db import models
 #     pass
 
 class Cart(models.Model):
-    user = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, default=True)
+    image_path = models.CharField(max_length=255, default=True)
+    price = models.CharField(max_length=255, default=True)
     # product_list = models.ManyToManyField(Product, blank=True, null=True)

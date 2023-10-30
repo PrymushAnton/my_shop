@@ -33,11 +33,11 @@
                 <div class="dropdown-child">
                     {% if auth == True %}
                         <a href="{% url 'cart_page' %}">Кошик</a>
-                        <a href="{% url 'contact_page' %}">Контакти</a>
                     {% else %}
                         <a href="{% url 'authorizationPage' %}">Ввійдіть в акаунт</a>
                         <a href="{% url 'registrationPage' %}">Зареєструватись</a>
                     {% endif %} 
+                    <a href="{% url 'contact_page' %}">Контакти</a>
                 </div>
             </div>
         </div>
