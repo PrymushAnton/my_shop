@@ -6,3 +6,8 @@ def authorization(request):
 
 def registration(request):
     return render(request, 'Authorization_Registration/registration.html')
+
+def register_request(request):
+    if request.method == 'POST':
+        print(1)
+    return render(request, 'Authorization_Registration/registration.html')
