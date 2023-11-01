@@ -9,7 +9,7 @@ def registration(request):
 
 def register(request):
     if request.method == 'POST':
-        print(request)
+        print(request.POST)
     return render(request, 'Authorization_Registration/registration.html')
 
 def login(request):
