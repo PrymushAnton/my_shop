@@ -21,7 +21,7 @@
                 <p>Процесор: {{product.cpu}}</p>
                 <p>Корпус: {{product.case}}</p>
                 <div class="buttons">
-                    <button onclick="window.location.href = 'product_page/';" class="firstButton">Дізнатися більше</button>
+                    <button onclick="window.location.href = 'product_page{{product.id}}/';" class="firstButton">Дізнатися більше</button>
                     <button>Додати у кошик</button>
                 </div>
                 <p id="price">Ціна: {{product.price}} грн</p>

@@ -26,9 +26,14 @@
                 {% block header %}
                 {% endblock %}
             </div>
+
             <div class="settings">
                 <button class="mainmenubtn">
-                    <img src="{% static 'APP_Settings/photo/menu_icon.png' %}" alt='???'>
+                    {% if auth == True %}
+                        <h2>Login: login</h2>
+                    {% else %}
+                        <img src="{% static 'APP_Settings/photo/menu_icon.png' %}" alt='???'>
+                    {% endif %} 
                 </button>
                 <div class="dropdown-child">
                     {% if auth == True %}
@@ -40,6 +45,7 @@
                     <a href="{% url 'contact_page' %}">Контакти</a>
                 </div>
             </div>
+
         </div>
     </header>
     <div class='background'></div>

@@ -82,7 +82,7 @@ main{
     border: none;
     /* border-left: 2px solid rgba(0, 0, 0); */
     padding: 0;
-    cursor: pointer;
+    /* cursor: pointer; */
     height: 100%;
     top: 0px;
     /* width: 10%; */
@@ -139,3 +139,4 @@ main{
     /* text-decoration: none; */
     color: black;
 }
+

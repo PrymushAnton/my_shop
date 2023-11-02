@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.block_cart {
+/* .block_cart {
     display: inline-block;
     position: relative;
     margin: 20px;
@@ -13,7 +13,21 @@
     text-align: center;
     background: linear-gradient(to top, rgb(105, 144, 241)  , #76cdf0 , #9ab5f7 );
     width: 420px;
-    height: 335px;
+    height: 3351px;
+} */
+
+.block_cart {
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 25px;
+    align-content: center;
+    text-align: center;
+    background: linear-gradient(to top, rgb(105, 144, 241)  , #76cdf0 , #9ab5f7 );
+    width: 420px;
+    height: 355px;
 }
 
 

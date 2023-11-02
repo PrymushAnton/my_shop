@@ -5,6 +5,6 @@ from .models import Main
 def main_page(request):
     
     product = Main.objects.all()
-    auth = False
+    auth = True
     
     return render(request, 'Main_page/main.html', context = {'products': product, "auth": auth})

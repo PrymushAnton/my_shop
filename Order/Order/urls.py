@@ -25,7 +25,7 @@ import Authorization_Registration.views as authorization_registration_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main_page_views.main_page, name= "main_page"),
-    path('product_page/', product_page_views.product_page, name= "product_page"),
+    path('product_page1/', product_page_views.product_page, name= "product_page1"),
     path('cart_page/', shopping_cart_views.cart_page, name= "cart_page"),
     path('contact_page/', contact_views.contact_page, name= "contact_page"),
     path('authorization_page/', authorization_registration_views.authorization, name= "authorizationPage"),
