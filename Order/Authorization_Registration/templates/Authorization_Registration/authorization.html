@@ -21,7 +21,7 @@
                 </div>
                 <div class="input">
                     <input type="text" name="login">
-                    <input type="password" name="pass">
+                    <input type="password" name="password">
                 </div>
             </div>
         </div>
@@ -30,4 +30,12 @@
         </div>
     </form>
 {% endblock main %}
+    
+
+{% block error %}
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+        
+{% endblock error %}
     

@@ -21,6 +21,9 @@
     border-right: 2px solid black;
     height: 340px;
 }
+.hide{
+    display: none
+}
 /* #C1C8E4 */
 /* background: linear-gradient(to top, #C1C8E4, #6498e9); */
 /* main div{

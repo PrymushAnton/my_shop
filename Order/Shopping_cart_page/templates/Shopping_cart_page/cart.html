@@ -6,31 +6,47 @@
 {% endblock %}
 
 {% block main %}
-
-
-
-<div class="block_cart">
-    <div>
-        <img src="https://play-lh.googleusercontent.com/N7p1LUZQj1Zrth7Jmn6tMlogB8JYv-ozxxJC-Qwq_NIqBluDSUj0Mt8BeBphM0rX9A=w240-h480-rw" alt="Product photo">
+    <div class="cart_conteiner">
+        {% if products_cart %}
+            {% for product in products_cart %}
+                <div class="block_cart">
+                    <div class="image">
+                        <img src="https://yabloki.ua/media/cache/product_homepage_image/05/27/72cc60bd7073c3b37ac8447ea079.png.webp" alt="Product photo">
+                    </div>
+                    <div class="name">
+                        <p>Name</p>
+                    </div>
+                    <div class="price">
+                        <p>Price</p>
+                    </div>
+                    <div class="buttons">
+                        <button onclick="window.location.href = '../product_page2/';">Дізнатися більше</button>
+                        <form action="#" method="delete">
+                            <button type="submit">Вилучити з кошика</button>
+                            <input type="text" value="1" style="display: none;">
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
     </div>
-
-    <div id="name">
-        <p>Name</p>
-    </div>
-    
-    <div id="price">
-        <p>Price</p>
-    </div>
-
-    <div id="buttons">
-        <button onclick="window.location.href = '../product_page2/';">Дізнатися більше</button>
-        <button>Вилучити з кошика</button>
-    </div>
-
-</div>
-
-<div id="buttonConfirm">
-    <button>Оформити замовлення</button>
-</div>
-
 {% endblock %}
+
+
+{% block footer %}
+    <footer>
+        <div class="amount">
+            <p>Кількість товару: 1000</p>
+        </div>
+        <div class="all_price">
+            <p>Загальна ціна:100000</p>
+        </div>
+        <div id="buttonConfirm">
+            <form action="#" method="put">
+                {% csrf_token %}
+                <button>Оформити замовлення</button>
+            </form>
+        </div>
+    </footer>
+{% endblock footer %}
+    
