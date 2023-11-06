@@ -21,7 +21,8 @@
                 <p>Процесор: {{product.cpu}}</p>
                 <p>Корпус: {{product.case}}</p>
                 <div class="buttons">
-                    <form action={{product.product_path}} method="post">
+                    <form action="{% url 'product_page1' %}" method="post">
+                        {% csrf_token %}
                         <input type="text" value={{product.id}} class="hide">
                         <button class="firstButton">Дізнатися більше</button>
                     </form>

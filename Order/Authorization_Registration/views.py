@@ -15,10 +15,11 @@ def registration(request):
     return render(request, 'Authorization_Registration/registration.html')
 
 def register (request):
+
     context = {}
     # print(request.user.is_authenticated)
-    # if request.user.is_authenticated:
-    #     context['error'] = 'Ти вже авторизувався'
+    if request.user.is_authenticated:
+        return redirect('main_page')
     if request.method == 'POST':
         login_name = request.POST.get("username")
         email = request.POST.get("email")
@@ -40,7 +41,7 @@ def register (request):
                     if password == confirm_password:
                         try:
                             user_reade = User.objects.create_user(username=login_name, email=email,password=password)
-                            # login(request, user_reade)
+                            login(request, user_reade)
                             print("Join person")
                             return redirect('main_page')
                         except IntegrityError:
@@ -59,7 +60,6 @@ def register (request):
 def logins(request):
     context = {}
     context['error'] = ""
-    context["auth"] = request.user.is_authenticated
     print(request.user.is_authenticated)
     if request.user.is_authenticated:
         context['error'] = 'Ти вже авторизувався'
