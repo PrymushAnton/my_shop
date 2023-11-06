@@ -39,10 +39,11 @@
                     {% if auth == True %}
                         <a href="{% url 'cart_page' %}">Кошик</a>
                     {% else %}
-                        <a href="{% url 'authorizationPage' %}">Ввійдіть в акаунт</a>
+                        <a href="{% url 'login' %}">Ввійдіть в акаунт</a>
                         <a href="{% url 'registrationPage' %}">Зареєструватись</a>
                     {% endif %} 
                     <a href="{% url 'contact_page' %}">Контакти</a>
+                    <a href="{% url 'logout' %}">Вийти з акаунту</a>
                 </div>
             </div>
 
@@ -54,6 +55,14 @@
 
         {% endblock %}
     </main>
+    {% block footer %}
+        
+    {% endblock %}
 
+    <div class="error">
+        {% block error %}
+        
+        {% endblock %}
+    </div>
 </body>
 </html>

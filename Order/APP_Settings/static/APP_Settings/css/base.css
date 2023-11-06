@@ -140,3 +140,9 @@ main{
     color: black;
 }
 
+.hide{
+    display: none
+}
+.error{
+    position: absolute;
+}

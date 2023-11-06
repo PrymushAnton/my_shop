@@ -4,4 +4,7 @@ from .models import Cart
 # Create your views here.
 def cart_page(request):
     cart = Cart.objects.all()
-    return render(request, 'Shopping_cart_page/cart.html', context={"cart": cart})
+    return render(request, 'Shopping_cart_page/cart.html', context={"cart": cart, "auth": request.user.is_authenticated})
+
+# def add_cart_product(request):
+    

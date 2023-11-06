@@ -106,3 +106,7 @@ main div.zaglav h1{
 form {
     border: 40px ;
 }
+
+.error{
+    bottom: 0;
+}
