@@ -27,6 +27,7 @@ urlpatterns = [
     path('', main_page_views.main_page, name= "main_page"),
     path('product_page1/', product_page_views.product_page, name= "product_page1"),
     path('cart_page/', shopping_cart_views.cart_page, name= "cart_page"),
+    path('add_cart_product/', shopping_cart_views.add_cart_product, name= "add_cart_product"),
     path('contact_page/', contact_views.contact_page, name= "contact_page"),
     path('registration_page/', authorization_registration_views.registration, name= "registrationPage"),
     path('logins/', authorization_registration_views.logins, name='login'),
@@ -36,4 +37,5 @@ urlpatterns = [
     path('product_page3/', product_page_views.product_page3, name= "product_page3"),
     path('product_page4/', product_page_views.product_page4, name= "product_page4"),
     path('product_page5/', product_page_views.product_page5, name= "product_page5"),
+    path('delete_product_cart/', shopping_cart_views.delete_product_cart, name='delete_product_cart'),
 ]

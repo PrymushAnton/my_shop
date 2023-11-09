@@ -9,24 +9,24 @@
     <div class="cart_conteiner">
         {% if products_cart %}
             {% for product in products_cart %}
-            <div class="block_cart">
-                <div class="image">
-                    <img src="https://yabloki.ua/media/cache/product_homepage_image/05/27/72cc60bd7073c3b37ac8447ea079.png.webp" alt="Product photo">
+                <div class="block_cart">
+                    <div class="image">
+                        <img src="https://yabloki.ua/media/cache/product_homepage_image/05/27/72cc60bd7073c3b37ac8447ea079.png.webp" alt="Product photo">
+                    </div>
+                    <div class="name">
+                        <p>Name</p>
+                    </div>
+                    <div class="price">
+                        <p>Price</p>
+                    </div>
+                    <div class="buttons">
+                        <button onclick="window.location.href = '../product_page2/';">Дізнатися більше</button>
+                        <form action="#" method="delete">
+                            <button type="submit">Вилучити з кошика</button>
+                            <input type="text" value="1" style="display: none;">
+                        </form>
+                    </div>
                 </div>
-                <div class="name">
-                    <p>Name</p>
-                </div>
-                <div class="price">
-                    <p>Price</p>
-                </div>
-                <div class="buttons">
-                    <button onclick="window.location.href = '../product_page2/';">Дізнатися більше</button>
-                    <form action="#" method="delete">
-                        <button type="submit">Вилучити з кошика</button>
-                        <input type="text" value="1" style="display: none;">
-                    </form>
-                </div>
-            </div>
             {% endfor %}
         {% endif %}
     </div>

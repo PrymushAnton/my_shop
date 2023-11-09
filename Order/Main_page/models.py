@@ -8,9 +8,9 @@ class Main(models.Model):
     memory = models.CharField(max_length=255)
     cpu = models.CharField(max_length=255)
     case = models.CharField(max_length=255)
-    image_path = models.CharField(max_length=255)
+    image_path = models.CharField(max_length=255, default="http://localhost:8000/product_page1/")
     product_path = models.CharField(max_length=255, blank=True, null=True)
-    price = models.IntegerField(default="http://localhost:8000/product_page1/")
+    price = models.IntegerField()
 
 
 # Main.objects.create(name = 'Apple iPhone 14 Pro', screen = '6.1 ", 2556x1179, 460 ppi, 120 Гц', camera = '3 модулі, 48 МП, + 12 МП, fullHD 60 к/с, відео 4K, оптична стабілізація, стабілізація матрицею', memory = '512 ГБ', cpu = 'Apple A16', case = 'скло, 206 г, товщина 8 мм', image_path = 'https://yabloki.ua/media/cache/app_product_page_small_slider_image/79/d5/eaf12ac031d35cc9e9ff37052e3f.png')

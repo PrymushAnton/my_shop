@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
 from django.db.utils import IntegrityError
+from Shopping_cart_page.models import Cart
 
 # Create your views here.
 # def authorization(request):
@@ -43,6 +44,7 @@ def register (request):
                             user_reade = User.objects.create_user(username=login_name, email=email,password=password)
                             login(request, user_reade)
                             print("Join person")
+                            Cart.objects.create(user_id=request.user.id)
                             return redirect('main_page')
                         except IntegrityError:
                             print("Error person")

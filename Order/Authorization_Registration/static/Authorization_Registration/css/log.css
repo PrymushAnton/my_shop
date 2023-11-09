@@ -110,3 +110,8 @@ form {
 .error{
     bottom: 0;
 }
+
+.error p{
+    color: rgb(214, 55, 55);
+    font-size: 1.5em;
+}
