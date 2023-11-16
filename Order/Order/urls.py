@@ -33,9 +33,5 @@ urlpatterns = [
     path('logins/', authorization_registration_views.logins, name='login'),
     path('register/', authorization_registration_views.register, name='register'),
     path('logouts/', authorization_registration_views.logouts, name='logout'),
-    path('product_page2/', product_page_views.product_page2, name= "product_page2"),
-    path('product_page3/', product_page_views.product_page3, name= "product_page3"),
-    path('product_page4/', product_page_views.product_page4, name= "product_page4"),
-    path('product_page5/', product_page_views.product_page5, name= "product_page5"),
     path('delete_product_cart/', shopping_cart_views.delete_product_cart, name='delete_product_cart'),
 ]

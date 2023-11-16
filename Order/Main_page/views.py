@@ -14,5 +14,5 @@ def main_page(request):
         'products': product,
         # "auth": request.user.is_authenticated
     }
-    
+    # print(product)
     return render(request, 'Main_page/main.html', context)

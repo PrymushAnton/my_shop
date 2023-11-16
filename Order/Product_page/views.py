@@ -1,17 +1,9 @@
 from django.shortcuts import render
+from Main_page.models import Main
 
 # Create your views here.
 def product_page(request):
-    return render(request, 'Product_page/product_page1.html', )
-
-def product_page2(request):
-    return render(request, 'Product_page/product_page2.html', )
-
-def product_page3(request):
-    return render(request, 'Product_page/product_page3.html', )
-
-def product_page4(request):
-    return render(request, 'Product_page/product_page4.html', )
-
-def product_page5(request):
-    return render(request, 'Product_page/product_page5.html', )
+    context = {}
+    context['product'] = Main.objects.get(id = request.POST.get('ids'))
+    print(context['product'])
+    return render(request, 'Product_page/product_page1.html', context)

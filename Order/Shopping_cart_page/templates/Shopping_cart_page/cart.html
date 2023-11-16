@@ -11,35 +11,42 @@
             {% for product in products_cart %}
                 <div class="block_cart">
                     <div class="image">
-                        <img src="https://yabloki.ua/media/cache/product_homepage_image/05/27/72cc60bd7073c3b37ac8447ea079.png.webp" alt="Product photo">
+                        <img src={{product.obj.image_path}} alt="Product photo">
                     </div>
                     <div class="name">
-                        <p>Name</p>
+                        <p>{{product.obj.name}}</p>
                     </div>
                     <div class="price">
-                        <p>Price</p>
+                        <p>{{product.obj.price}}</p>
                     </div>
                     <div class="buttons">
-                        <button onclick="window.location.href = '../product_page2/';">Дізнатися більше</button>
-                        <form action="#" method="delete">
+                        <form action="{% url 'product_page1' %}" method="post">
+                            {% csrf_token %}
+                            <input type="text" value="{{product.obj.id}}" style="display: none;" name="ids">
+                            <button type="submit">Дізнатися більше</button>
+                        </form>
+                        <form action="{% url 'delete_product_cart' %}" method="post">
+                            {% csrf_token %}
                             <button type="submit">Вилучити з кошика</button>
-                            <input type="text" value="1" style="display: none;">
+                            <input type="text" value="{{product.num}}" style="display: none;" name="id_product">
                         </form>
                     </div>
                 </div>
             {% endfor %}
         {% endif %}
+        <div class="ender"></div>
     </div>
+    
 {% endblock %}
 
 
 {% block footer %}
     <footer>
         <div class="amount">
-            <p>Кількість товару: 1000</p>
+            <p>Кількість товару: {{len_prod}}</p>
         </div>
         <div class="all_price">
-            <p>Загальна ціна:100000</p>
+            <p>Загальна ціна:{{opti_prise}}</p>
         </div>
         <div id="buttonConfirm">
             <form action="#" method="put">
