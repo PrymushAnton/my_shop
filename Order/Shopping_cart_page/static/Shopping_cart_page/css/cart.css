@@ -30,10 +30,16 @@ footer{
     z-index: 1;
 }
 
+.image{
+    display: flex;
+    width: 13%;
+}
+
 .image img{
     height: 14em;
     border-right: 2px solid black;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .cart_conteiner{
