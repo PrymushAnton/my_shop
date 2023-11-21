@@ -1,47 +1,90 @@
-/* @keyframes example {
-    0% {box-shadow: 0px 0px 0px}
-    50% {box-shadow: 2px 2px 2px}
-    100% {box-shadow: 0px 0px 0px}
-} */
-
-.line_div .images img{
-    display: inline-block;
-    width: 70%;
-    border: 2px solid black;
-    border-radius: 7px;
-    /* margin-left: 10px; */
-    background: linear-gradient(to top, #e3d000, #ff8800);
+*{
+    padding: 0;
+    margin: 0;
 }
-/* background: linear-gradient(to top, #ffea00, #ff8800); */
-.images{
-    width: 17%;
+
+.line_div_phone{
+    display: none;
+}
+
+.mainDiv{
+    padding: 10px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.line_div{
+    display: flex;
+    width: 98%;
+    border: 2px solid black;
+    border-radius: 7px;
+    background-color: rgba(250, 235, 215, 0.318);
+}
+
+.line_div p{
+    font-size: 20px;
+}
+
+.line_div .images{
     border-right: 2px solid black;
-    height: 340px;
-    position:absolute;
+    width: 19%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
-/* .hide{
-    display: none
-} */
-/* #C1C8E4 */
-/* background: linear-gradient(to top, #C1C8E4, #6498e9); */
-/* main div{
-    width: 90%;
-    height: 330px;
-} */
 
-main div div h2{
-    /* display: block; */
+.images h2{
+    padding: 10px;
+    font-size: 22px;
+}
+
+.line_div .images img{
+    width: 65%;
+    border: 2px solid black;
+    border-radius: 7px;
+    background: linear-gradient(to top, #e3d000, #ff8800);
+    
+}
+
+.info{
+    width: 81%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+#price{
+    font-size: 24px;
+}
+
+.buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button{
+    border: 2px solid black;
+    background-color: orange;
+    border-radius: 10px;
+    font-size: 22px;
+    padding: 7px;
+}
+
+.buttons button:hover{
+    background-color: darkgoldenrod;
+    box-shadow: 2px 2px 2px;
+    cursor: pointer;
+}
+
+/* main div div h2{
     font-size: 23px;
-    /* margin-left: 10px; */
 }
 
-/* main div div{
-    display: inline-block;
-    position:absolute;
-} */
 
 .info{
     width: 82%;
@@ -54,19 +97,7 @@ main div div h2{
     font-size: 20px;
 }
 
-.line_div_phone{
-    display: none;
-}
 
-.line_div {
-    width: 98%;
-    margin: 10px;
-    border: 3px solid black;
-    border-radius: 20px;
-    height: 340px;
-    background-color: rgba(250, 235, 215, 0.318);
-}
-/* #C1C8E4 */
 
 .buttons{
     display: flex;
@@ -89,9 +120,6 @@ main div div h2{
 
 .info button:hover{
     background-color: darkgoldenrod;
-    
-    /* animation-name: example;
-    animation-duration: 0.5s; */
     box-shadow: 2px 2px 2px;
     cursor: pointer;
 }
@@ -100,7 +128,7 @@ main div div h2{
     margin: 0;
     margin-left: 10px;
     font-size: 25px;
-}
+} */
 
 @media (max-width:768px){
     *{
@@ -112,7 +140,6 @@ main div div h2{
         display: none;
     }
 
-
     main {
         display: flex;
         flex-direction: column;
@@ -123,8 +150,8 @@ main div div h2{
     .line_div_phone{
         display: flex;
         flex-direction: column;
-        width: 350px;
-        height: 400px;
+        width: 70%;
+        height: 20%;
         border: 3px solid black;
         border-radius: 20px;
         align-items: center;
@@ -132,6 +159,7 @@ main div div h2{
         margin: 10px;
         gap: 40px;
         background-color: rgba(250, 235, 215, 0.318);
+        padding: 10px;
     }
     .images_phone{
         height: 50%;
@@ -147,10 +175,6 @@ main div div h2{
         border-radius: 7px;
         background: linear-gradient(to top, #e3d000, #ff8800);
     }
-
-    /* .images_phone h2{
-        margin-bottom: 15px;
-    } */
 
     .buttons_phone{
         display: flex;
@@ -177,9 +201,9 @@ main div div h2{
         border: 2px solid black;
         background-color: orange;
         border-radius: 10px;
-        font-size: 20px;
+        font-size: 18px;
         padding: 4px;
-        margin: 5px;
+        margin: 10px;
         display: flex;
         flex-wrap: nowrap;
     }
@@ -191,7 +215,7 @@ main div div h2{
     }
     
     .info_phone p{
-        font-size: 20px;
+        font-size: 24px;
     }
 
 }

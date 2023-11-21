@@ -8,6 +8,7 @@
 
 
 {% block main %}
+<div class="mainDiv">
     {% for product in products %}
         <div class="line_div">
             <div class="images">
@@ -20,6 +21,7 @@
                 <p>Пам'ять: {{product.memory}}</p>
                 <p>Процесор: {{product.cpu}}</p>
                 <p>Корпус: {{product.case}}</p>
+                <p id="price">Ціна: {{product.price}} грн</p>
                 <div class="buttons">
                     <form action="{% url 'product_page1' %}" method="POST">
                         {% csrf_token %}
@@ -31,13 +33,9 @@
                         <input type="text" value={{product.id}} class="hide" name="ids">
                         <button>Додати у кошик</button>
                     </form>
-                </div>
-                <p id="price">Ціна: {{product.price}} грн</p>
+                </div>      
             </div>
-            
         </div>
-
-        
     {% endfor %}
 
 
@@ -48,6 +46,7 @@
                 <img src="{{product.image_path}}" alt="">
             </div>
             <div class="info_phone">
+                <p id="price_phone">Ціна: {{product.price}} грн</p>
                 <div class="buttons_phone">
                     <form action="{% url 'product_page1' %}" method="POST">
                         {% csrf_token %}
@@ -59,11 +58,9 @@
                         <input type="text" value={{product.id}} class="hide" name="ids">
                         <button>Додати у кошик</button>
                     </form>
-                    
                 </div>
-                <p id="price_phone">Ціна: {{product.price}} грн</p>
             </div>
-            
         </div>
     {% endfor %}
+</div>
 {% endblock %}
