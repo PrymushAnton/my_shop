@@ -4,6 +4,12 @@
     height: auto;
 }
 
+body{
+    overflow-x: hidden
+}
+body{
+    height:97%;
+}
 main{
     height: 70%;
 }
@@ -105,13 +111,4 @@ main div.zaglav h1{
 /* rgba(100, 92, 255, 0.547) */
 form {
     border: 40px ;
-}
-
-.error{
-    bottom: 0;
-}
-
-.error p{
-    color: rgb(214, 55, 55);
-    font-size: 1.5em;
 }
