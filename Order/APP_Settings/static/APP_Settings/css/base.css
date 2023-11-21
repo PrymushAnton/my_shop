@@ -146,3 +146,25 @@ main{
 .error{
     position: absolute;
 }
+
+@media (max-width: 600px) {
+    header {
+        height: 50%;
+    }
+    .head {
+        font-size: 10px;
+
+    }
+
+    .settings {
+        width: 50%;
+        height: 50%;
+    }
+    .mainmenubtn {
+        width: 50%;
+    }
+    /* button {
+        height: 40%;
+        width: 40%;
+    } */
+}
