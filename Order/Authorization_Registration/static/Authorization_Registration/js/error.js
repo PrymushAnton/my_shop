@@ -1,7 +1,7 @@
 let errors = document.querySelector(".errors")
 let error = document.querySelector(".error")
 
-error.style.color = "black"
+error.style.color = "red"
 error.style.fontSize = "2em";
 error.style.top = "85%"
 error.style.left = "100%"
