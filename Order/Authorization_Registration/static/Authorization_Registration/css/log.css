@@ -1,14 +1,13 @@
 .centerBlock{
     position: absolute;
-    top: 30%;
     height: auto;
+    margin-top: 5%;
 }
 
 body{
-    overflow-x: hidden
-}
-body{
-    height:97%;
+    overflow-x: hidden;
+    height:auto;
+    font-size: 0.9em;
 }
 main{
     height: 70%;
@@ -38,11 +37,11 @@ main div div div{
 .label{
     width: 15%;
     margin-right: 40px;
+    justify-content: space-around;
 }
 
 .label p{
-    height: 43px;
-    margin: 20px 0px;
+    margin: 0;
     font-size: 2em;
     text-align: end;
 }
@@ -61,23 +60,24 @@ main div div div{
 }
 
 main div.zaglav{
+    margin: 0;
     height: auto;
+    margin-top: 12%;
     text-align: center;
 }
 main div.zaglav h1{
-    position: relative;
-    margin-top: 20px;
-    top: 50px;
+    /* position: relative; */
     font-size: 3em;
+    margin: 0;
 }
 
 .butn{
     height: auto;
     width: auto;
     display: inline;
-    position: absolute;
+    position: fixed;
     right: 5%;
-    bottom: -7%;
+    bottom: 5%;
 }
 
 .url {
@@ -111,4 +111,29 @@ main div.zaglav h1{
 /* rgba(100, 92, 255, 0.547) */
 form {
     border: 40px ;
+}
+
+@media (max-width: 768px){
+    .centerBlock{
+        position: absolute;
+        height: auto;
+        margin-top: 15%;
+    }
+    .registrSistem{
+        flex-direction: row;
+        margin-left:2% ;
+        justify-content: space-between;
+        padding-right: 3%;
+        box-sizing: border-box;
+    }
+    .input{
+        width: 60%;
+    }
+}
+@media (max-height: 700){
+    .centerBlock{
+        position: absolute;
+        height: auto;
+        margin-top: 10%;
+    }
 }
