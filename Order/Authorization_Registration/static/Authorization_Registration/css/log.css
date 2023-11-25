@@ -114,7 +114,9 @@ form {
 }
 
 @media (max-width: 768px){
-    body{overflow: hidden;}
+    body{
+        overflow: hidden;
+    }
     .centerBlock{
         position: absolute;
         height: auto;
@@ -131,6 +133,11 @@ form {
     .input{
         width: 60%;
     }
+
+    .label p{
+        font-size: 1.8em;
+    }
+
 }
 @media (max-height: 700){
     .centerBlock{

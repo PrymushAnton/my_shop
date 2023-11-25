@@ -148,7 +148,7 @@ main{
     position: absolute;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     header div.head h1{
         display: inline-block;
         width: 50%;
