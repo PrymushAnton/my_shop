@@ -13,28 +13,31 @@
                     <div class="image">
                         <img src={{product.obj.image_path}} alt="Product photo">
                     </div>
-                    <div class="name">
-                        <p>{{product.obj.name}}</p>
+                    <div class="info">
+                        <div class="name">
+                            <p>{{product.obj.name}}</p>
+                        </div>
+                        <div class="price">
+                            <p>{{product.obj.price}}</p>
+                        </div>
+                        <div class="buttons">
+                            <form action="{% url 'product_page1' %}" method="post">
+                                {% csrf_token %}
+                                <input type="text" value="{{product.obj.id}}" style="display: none;" name="ids">
+                                <button type="submit">Дізнатися більше</button>
+                            </form>
+                            <form action="{% url 'delete_product_cart' %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit">Вилучити з кошика</button>
+                                <input type="text" value="{{product.num}}" style="display: none;" name="id_product">
+                            </form>
+                        </div>
                     </div>
-                    <div class="price">
-                        <p>{{product.obj.price}}</p>
-                    </div>
-                    <div class="buttons">
-                        <form action="{% url 'product_page1' %}" method="post">
-                            {% csrf_token %}
-                            <input type="text" value="{{product.obj.id}}" style="display: none;" name="ids">
-                            <button type="submit">Дізнатися більше</button>
-                        </form>
-                        <form action="{% url 'delete_product_cart' %}" method="post">
-                            {% csrf_token %}
-                            <button type="submit">Вилучити з кошика</button>
-                            <input type="text" value="{{product.num}}" style="display: none;" name="id_product">
-                        </form>
-                    </div>
+                    
                 </div>
             {% endfor %}
         {% endif %}
-        <div class="ender"></div>
+        <!-- <div class="ender"></div> -->
     </div>
     
 {% endblock %}

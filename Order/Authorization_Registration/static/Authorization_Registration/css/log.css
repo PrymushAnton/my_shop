@@ -1,7 +1,7 @@
 .centerBlock{
     position: absolute;
     height: auto;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 body{
@@ -62,7 +62,7 @@ main div div div{
 main div.zaglav{
     margin: 0;
     height: auto;
-    margin-top: 12%;
+    margin-top: 3%;
     text-align: center;
 }
 main div.zaglav h1{
@@ -120,7 +120,7 @@ form {
     .centerBlock{
         position: absolute;
         height: auto;
-        margin-top: 15%;
+        margin-top: 10%;
     }
     .registrSistem{
         width: 100%;
