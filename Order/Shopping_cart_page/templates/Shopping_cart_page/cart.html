@@ -11,7 +11,7 @@
             {% for product in products_cart %}
                 <div class="block_cart">
                     <div class="image">
-                        <img src={{product.obj.image_path}} alt="Product photo">
+                        <img src={{product.obj.img.url}} alt="Product photo">
                     </div>
                     <div class="info">
                         <div class="name">
@@ -21,7 +21,7 @@
                             <p>{{product.obj.price}}</p>
                         </div>
                         <div class="buttons">
-                            <form action="{% url 'product_page1' %}" method="post">
+                            <form action="{% url 'product_page{{product.id}}' %}" method="post">
                                 {% csrf_token %}
                                 <input type="text" value="{{product.obj.id}}" style="display: none;" name="ids">
                                 <button type="submit">Дізнатися більше</button>

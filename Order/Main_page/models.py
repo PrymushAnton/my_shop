@@ -11,8 +11,13 @@ class Main(models.Model):
     image_path = models.CharField(max_length=255, default="http://localhost:8000/product_page1/")
     product_path = models.CharField(max_length=255, blank=True, null=True)
     price = models.IntegerField()
+    img = models.ImageField(blank=True, null=True)
     def __str__(self) -> str:
         return f"{self.name}, {self.image_path}, {self.product_path}"
+    class Meta:
+        verbose_name = 'Продукт'
+        verbose_name_plural = 'Продукти'
+    
         
 
 

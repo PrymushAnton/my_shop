@@ -16,16 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .settings import DEBUG, MEDIA_URL, MEDIA_ROOT
+from django.conf.urls.static import static
 import Main_page.views as main_page_views
 import Product_page.views as product_page_views
 import Shopping_cart_page.views as shopping_cart_views
 import Contact_page.views as contact_views
 import Authorization_Registration.views as authorization_registration_views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main_page_views.main_page, name= "main_page"),
-    path('product_page1/', product_page_views.product_page, name= "product_page1"),
+    path('product_page<int:id>/', product_page_views.product_page, name= "product_page"),
     path('cart_page/', shopping_cart_views.cart_page, name= "cart_page"),
     path('add_cart_product/', shopping_cart_views.add_cart_product, name= "add_cart_product"),
     path('contact_page/', contact_views.contact_page, name= "contact_page"),
@@ -35,3 +38,6 @@ urlpatterns = [
     path('logouts/', authorization_registration_views.logouts, name='logout'),
     path('delete_product_cart/', shopping_cart_views.delete_product_cart, name='delete_product_cart'),
 ]
+
+if DEBUG:
+    urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
